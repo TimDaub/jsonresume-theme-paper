@@ -1,5 +1,5 @@
 {
-  "name": "jsonresume-theme-Paper",
+  "name": "jsonresume-theme-paper",
   "version": "0.1.0",
   "description": "A theme for JSON Resume",
   "author": "Tim Daubenschütz",
@@ -12,11 +12,8 @@
     "handlebars": "^2.0.0-alpha.4"
   },
   "homepage": "https://github.com/TimDaub/timsresumetemplate",
-  "main": "resume.template",
+  "main": "index.js",
   "devDependencies": {},
-  "scripts": {
-    "test": "resume serve"
-  },
   "keywords": [
     "jsonresume",
     "json",
