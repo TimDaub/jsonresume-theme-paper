@@ -1,5 +1,5 @@
 {
-  "name": "jsonresume-theme-boilerplate",
+  "name": "timsresumetemplate",
   "version": "0.1.0",
   "description": "Boilerplate theme for JSON Resume",
   "author": "Mattias Erming",
@@ -10,5 +10,19 @@
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/erming/jsonresume-theme-boilerplate/issues"
+  },
+  "homepage": "https://github.com/erming/jsonresume-theme-boilerplate",
+  "main": "resume.template",
+  "devDependencies": {},
+  "scripts": {
+    "test": "resume serve"
+  },
+  "keywords": [
+    "jsonresume",
+    "json",
+    "resume"
+  ]
 }
