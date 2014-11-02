@@ -1,7 +1,7 @@
 {
   "name": "timsresumetemplate",
   "version": "0.1.0",
-  "description": "Boilerplate theme for JSON Resume",
+  "description": "A theme for JSON Resume",
   "author": "Mattias Erming",
   "repository": {
     "type": "git",
