@@ -9,6 +9,9 @@ This is a theme for [JSON Resume](http://jsonresume.org/).
 * Make resume independent from web
 
 
+## Demo
+You can check out a static demo of the resume on codepen.io: http://codepen.io/TimDaub/pen/bfCLz
+
 ## Getting started
 
 To get started with theme development, this is what you'll need:
