@@ -1,20 +1,17 @@
 {
-  "name": "timsresumetemplate",
+  "name": "Paper-JSON-Resume",
   "version": "0.1.0",
   "description": "A theme for JSON Resume",
-  "author": "Mattias Erming",
+  "author": "Tim Daubenschütz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erming/jsonresume-theme-boilerplate"
+    "url": "https://github.com/TimDaub/timsresumetemplate"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4"
   },
-  "bugs": {
-    "url": "https://github.com/erming/jsonresume-theme-boilerplate/issues"
-  },
-  "homepage": "https://github.com/erming/jsonresume-theme-boilerplate",
+  "homepage": "https://github.com/TimDaub/timsresumetemplate",
   "main": "resume.template",
   "devDependencies": {},
   "scripts": {
