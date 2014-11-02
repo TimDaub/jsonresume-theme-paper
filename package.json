@@ -13,6 +13,9 @@
   },
   "homepage": "https://github.com/TimDaub/timsresumetemplate",
   "main": "index.js",
+  "scripts": {
+    "start": "resume serve'",
+  },
   "devDependencies": {},
   "keywords": [
     "jsonresume",
