@@ -20,9 +20,11 @@
 		  	{{#resume.basics}}
 			    <header>
 			      <div class="header-content">
+			      	{{#if picture}}
 			        <div class="header-pic" title="Wiggle Wiggle">
 			          <img src="{{picture}}" class="pic" />
 			        </div>
+			        {{/if}}
 			        <div class="header-text">
 			          <p>
 			            {{name}}
@@ -125,6 +127,8 @@
 							                <a href="{{url}}" target="_blank">
 							                	{{username}}
 							                </a>
+							              {{else}}
+															{{username}}
 						                {{/if}}
 					                {{/if}}
 					              </li>

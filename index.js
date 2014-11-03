@@ -5,7 +5,6 @@ function render(resume) {
 
 	var css = fs.readFileSync(__dirname + "/css/style.css", "utf-8");
   var opensans = fs.readFileSync(__dirname + "/bower_components/open-sans-fontface/open-sans.css", "utf-8");
-  var merriweather = fs.readFileSync(__dirname + "/bower_components/merriweather-fontface/merriweather.css", "utf-8");
 	var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
 
   // http://stackoverflow.com/a/12002281/1263876
@@ -25,7 +24,6 @@ function render(resume) {
 	return Handlebars.compile(template)({
 		css: css,
     opensans: opensans,
-    merriweather: merriweather,
 		resume: resume
 	});
 }

@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-paper",
-  "version": "0.1.2",
+  "version": "0.1.9",
   "description": "A theme for JSON Resume",
   "author": "Tim Daubenschütz",
   "repository": {
@@ -9,13 +9,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^2.0.0-alpha.4",
-    "bower": "1.3.12"
+    "handlebars": "^2.0.0-alpha.4"
   },
   "homepage": "https://github.com/TimDaub/timsresumetemplate",
   "main": "index.js",
   "scripts": {
-    "start": "resume serve"
+    "start": "bower install && resume serve"
   },
   "devDependencies": {},
   "keywords": [
