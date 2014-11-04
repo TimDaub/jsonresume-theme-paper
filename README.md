@@ -12,11 +12,11 @@ This is a theme for [JSON Resume](http://jsonresume.org/).
 ## PDF / Printing
 
 Since the printing functionality of `resume-cli` is a utter catastrophy where your `.html` file gets
-posted to a webservice where it's getting converted to `.pdf` this theme will not support this process.
+posted to a webservice and getting converted to `.pdf` this theme will not support this process.
 
 **BUT**
 
-You can just out-comment the `var print` variable in `index.js` and save your `.html` file via chrome.
+You can just out-comment the `var print` variable in `index.js` and save your `.html` to `.pdf` via CTRL+P (Print to PDF) file via chrome.
 In my opinion this does the best job in formating and layouting.
 
 
