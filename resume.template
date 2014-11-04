@@ -7,9 +7,12 @@
 	
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/print.css"/>
+
 	<style>
-	{{{opensans}}}
 	{{{css}}}
+	{{{print}}}
 	</style>
 	
 	</head>
@@ -209,41 +212,42 @@
 				      </section>
 			      {{/each}}
 					{{/if}}
+					<div class="page-break">
+						{{#if resume.education.length}}
+							{{#foreach resume.education}}
+					      <section class="content">
+					        <div class="row">
+					          <div class="content-cat">
 
-					{{#if resume.education.length}}
-						{{#foreach resume.education}}
-				      <section class="content">
-				        <div class="row">
-				          <div class="content-cat">
+					          	{{#if $first}}
+					            	Education
+											{{/if}}
 
-				          	{{#if $first}}
-				            	Education
-										{{/if}}
+											{{#if startDate}}
+												{{#if endDate}}
+					            		<p>{{startDate}} till {{endDate}}</p>
+					            	{{/if}}
+											{{/if}}
 
-										{{#if startDate}}
-											{{#if endDate}}
-				            		<p>{{startDate}} till {{endDate}}</p>
-				            	{{/if}}
-										{{/if}}
+					          </div>
+					          <div class="content-text work-listing education-listing">
 
-				          </div>
-				          <div class="content-text work-listing education-listing">
+											{{#if institution}}
+					            	<p class="heading">{{institution}}</p>
+											{{/if}}
 
-										{{#if institution}}
-				            	<p class="heading">{{institution}}</p>
-										{{/if}}
+											{{#if area}}
+												{{#if gpa}}
+					            		<p class="highlight">{{area}} ({{gpa}})</p>
+					            	{{/if}}
+											{{/if}}
 
-										{{#if area}}
-											{{#if gpa}}
-				            		<p class="highlight">{{area}} ({{gpa}})</p>
-				            	{{/if}}
-										{{/if}}
-
-				          </div>
-				        </div>
-				      </section>
-			      {{/foreach}}
-		      {{/if}}
+					          </div>
+					        </div>
+					      </section>
+				      {{/foreach}}
+			      {{/if}}
+		      </div>
 
 					{{#if resume.awards.length}}
 						{{#foreach resume.awards}}
@@ -346,7 +350,7 @@
 			      <section class="content">
 			        <div class="row">
 			          <div class="content-cat big-text">
-			            Skills
+			            Interests
 			          </div>
 			          <div class="content-text skills-listing">
 			          	<ul>

@@ -1,0 +1,633 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Tim Daubenschütz</title>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<style>
+	body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.content-text:hover {
+  border-left:1px solid #bdbdbd;
+}
+
+.big-text {
+  vertical-align:top;
+  
+  padding-top:1.25em;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+  font-size:0.75em;
+}
+
+.content-text ul li a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  line-height:1.5;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.25em;
+  margin-bottom:0.75em;
+}
+
+.work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  padding-left:0.5em;
+  
+  border-left:1px solid #e0e0e0;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.content-text.skills-listing > ul {
+  display:table-row;
+}
+
+.content-text.skills-listing > ul:last-child {
+  margin-bottom:0;
+}
+
+.content-text.skills-listing > ul > li {
+  display:table-cell;
+  vertical-align:top;
+  
+  padding-left:2em;
+  
+  width:33%;
+  font-weight:600;
+}
+
+.content-text.skills-listing > ul > li span {
+  font-weight:400;
+  color: #616161;
+}
+
+.content-text.skills-listing > ul > li > .highlight {
+  
+  font-size:1em;
+  font-weight:400;
+  
+  margin-left:1.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #9e9e9e;
+}
+	</style>
+	
+	</head>
+	<body>
+	
+		<div class="resume-wrapper">
+		  <article class="paper">
+			    <header>
+			      <div class="header-content">
+			        <div class="header-pic" title="Wiggle Wiggle">
+			          <img src="https://pbs.twimg.com/profile_images/378800000180844804/774fe25a8276d28c0999e305311e977e.jpeg" class="pic" />
+			        </div>
+			        <div class="header-text">
+			          <p>
+			            Tim Daubenschütz
+			          </p>
+			          <p class="subtitle">Bachelor of Science (almost)</p>
+			        </div>
+			      </div>
+			    </header>
+			    <div class="content-wrapper">
+			    
+			      <!-- CONTACT -->
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			           Contact
+			          </div>
+			          <div class="content-text">
+				            <ul>
+				              <li>Website</li>
+				              <li>http://tim.daubenschuetz.de</li>
+				            </ul>
+
+				            <ul>
+				              <li>Email</li>
+				              <li>tim.daubenschuetz@gmail.com</li>
+				            </ul>
+
+				            <ul>
+				              <li>Phone</li>
+				              <li>+49 176 840 842 63</li>
+				            </ul>
+			          </div>
+			        </div>
+			      </section>
+
+			      <!-- LOCATION -->
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat">
+			           Location
+			          </div>
+			          <div class="content-text">
+
+				            <ul>
+				              <li>Address</li>
+				              <li>Kelternweg 48</li>
+				            </ul>
+
+				            <ul>
+				              <li>Postal Code</li>
+				              <li>89075</li>
+				            </ul>
+
+				            <ul>
+				              <li>City</li>
+				              <li>Ulm</li>
+				            </ul>
+
+				            <ul>
+				              <li>Region</li>
+				              <li>Baden-Württemberg</li>
+				            </ul>
+
+			          </div>
+			        </div>
+			      </section>
+
+			      <!-- PROFILES -->
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat">
+				           Profiles
+				          </div>
+				          <div class="content-text">
+					            <ul>
+					              	<li>Twitter</li>
+					              <li>
+							                <a href="https://twitter.com/TimDaub" target="_blank">
+							                	@TimDaub
+							                </a>
+					              </li>
+					            </ul>
+					            <ul>
+					              	<li>Github</li>
+					              <li>
+							                <a href="https://github.com/TimDaub" target="_blank">
+							                	@TimDaub
+							                </a>
+					              </li>
+					            </ul>
+					            <ul>
+					              	<li>Codepen</li>
+					              <li>
+							                <a href="http://codepen.io/TimDaub/" target="_blank">
+							                	@TimDaub
+							                </a>
+					              </li>
+					            </ul>
+				          </div>
+				        </div>
+				      </section>
+
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+				          	Hondrt.de
+				          
+
+				          </div>
+				          <div class="content-text work-listing">
+										
+					            <p>
+					            	Hondrt is a small business enterprise (dt. Kleingewerbe) specializing in serving technical needs of local customers. For example building corporate homepages, technical consulting and programming. 
+					            </p>
+
+												<p class="highlight">Implemented and marketed Timedoublr.com, a flexible time tracking app for Apple iOS </p>
+												<p class="highlight">Consulted a medium-sized business in establishing their media presence</p>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+				          	Ulm University
+				          
+
+				          </div>
+				          <div class="content-text work-listing">
+										
+					            <p>
+					            	Development of Module Management System (MMS), a content management system for studycourse module handbooks introduced as part of the Bologna Process. Feature requirements included: versioning of every resource, a complex editorial process, visual representation of high level data structures (e.g. trees) and a flexible, restful API.
+					            </p>
+
+												<p class="highlight">Won the Software Construction (dt. Softwaregrundprojekt) class challenge for best usability and got employed by university</p>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+				          	Ulm University
+				          
+				            		<p>2014-10-01 till 2014-12-31</p>
+
+				          </div>
+				          <div class="content-text work-listing">
+										
+					            <p>
+					            	Prototyping an open Q&amp;A platform for curation and discussion of industry standard privacy patterns funded by EU. Feature requirements included a quality management system (votes and versioning of every resource), a basic user rights system as well a easy-to-use user interface design.
+					            </p>
+
+				          </div>
+				        </div>
+				      </section>
+
+
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat">
+
+				            	Education
+
+				            		<p>2011-10-01 till 2015-02-14</p>
+
+				          </div>
+				          <div class="content-text work-listing education-listing">
+
+				            	<p class="heading">Ulm University</p>
+
+				            		<p class="highlight">Media informatics (1.9)</p>
+
+				          </div>
+				        </div>
+				      </section>
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat">
+
+
+				            		<p>2002-09-13 till 2011-07-30</p>
+
+				          </div>
+				          <div class="content-text work-listing education-listing">
+
+				            	<p class="heading">Michelberg Gymnasium</p>
+
+				            		<p class="highlight">Allgemeine Hochschulreife (2.8)</p>
+
+				          </div>
+				        </div>
+				      </section>
+
+				      <section class="content">
+				        <div class="row">
+				          <div class="content-cat big-text">
+				            	Awards
+
+				            	<p>Best Usability</p>
+
+				            	<p style="margin-top:0.25em;">2013-07-13</p>
+
+				          </div>
+				          <div class="content-text work-listing education-listing">
+
+				            	<p class="heading">Faculty of Engineering and Computer Science at Ulm University</p>
+
+				            	<p class="highlight">By developing Module Management System (MMS) a content management system for module handbooks introduced as part of the Bologna Process.</p>
+
+
+				          </div>
+				        </div>
+				      </section>
+
+
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+			            Skills
+			          </div>
+			          <div class="content-text skills-listing">
+			          	<ul>
+			            
+			              <li>
+												Web Development
+
+				                	<span>(Master)</span>
+
+														<p class="highlight">Node.js</p>
+														<p class="highlight">Express.js</p>
+														<p class="highlight">Angular.js</p>
+														<p class="highlight">HTML</p>
+														<p class="highlight">CSS</p>
+			              </li>
+			            
+			            
+			              <li>
+												Programming languages
+
+				                	<span>(Advanced)</span>
+
+														<p class="highlight">JavaScript</p>
+														<p class="highlight">Java</p>
+														<p class="highlight">PL/SQL</p>
+														<p class="highlight">Objective-C</p>
+			              </li>
+			            
+			            
+			              <li>
+												Software skills
+
+				                	<span>(Advanced)</span>
+
+														<p class="highlight">Adobe Photoshop</p>
+														<p class="highlight">Adobe InDesign</p>
+														<p class="highlight">Eclipse IDE</p>
+														<p class="highlight">Microsoft Office</p>
+														<p class="highlight">Bitcoin</p>
+			              </li>
+			            
+			            </ul>
+			          </div>
+			        </div>
+			      </section>
+
+					<!-- LANGUAGE -->
+		      <section class="content">
+		        <div class="row">
+		          <div class="content-cat">
+		           Languages
+		          </div>
+		          <div class="content-text">
+
+			            <ul>
+										
+			              	<li>German</li>
+
+			              <li>Native Speaker</li>
+
+			            </ul>
+			            <ul>
+										
+			              	<li>English</li>
+
+			              <li>Fluent</li>
+
+			            </ul>
+
+		          </div>
+		        </div>
+		      </section>
+
+			      <section class="content">
+			        <div class="row">
+			          <div class="content-cat big-text">
+			            Skills
+			          </div>
+			          <div class="content-text skills-listing">
+			          	<ul>
+			            
+			              <li>
+												Sports
+
+														<p class="highlight">Biking</p>
+														<p class="highlight">Running</p>
+			              </li>
+			            
+			            
+			              <li>
+												Technology
+
+														<p class="highlight">Mobile</p>
+														<p class="highlight">Web</p>
+														<p class="highlight">Cryptocurrencies</p>
+														<p class="highlight">Artificial Intelligence</p>
+			              </li>
+			            
+			            </ul>
+			          </div>
+			        </div>
+			      </section>
+
+		    </div>
+		      
+		  </article>
+		  
+		</div>
+	</body>
+</html>

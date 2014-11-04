@@ -9,6 +9,17 @@ This is a theme for [JSON Resume](http://jsonresume.org/).
 * Make resume independent from web
 
 
+## PDF / Printing
+
+Since the printing functionality of `resume-cli` is a utter catastrophy where your `.html` file gets
+posted to a webservice where it's getting converted to `.pdf` this theme will not support this process.
+
+**BUT**
+
+You can just out-comment the `var print` variable in `index.js` and save your `.html` file via chrome.
+In my opinion this does the best job in formating and layouting.
+
+
 ## Demo
 You can check out a static demo of the resume on codepen.io: http://codepen.io/TimDaub/pen/bfCLz
 
