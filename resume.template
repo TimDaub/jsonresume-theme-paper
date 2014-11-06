@@ -21,7 +21,7 @@
 	</head>
 	<body>
 	
-	<span class="note">Check out new print view! (<strong>Press Ctrl + P</strong>)</span>
+	<span class="note">Check out new print view! (<strong>Press Ctrl + P</strong>) (Not available in Live-Editor!)</span>
 
 		<div class="resume-wrapper">
 		  <article class="paper">

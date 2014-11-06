@@ -15,6 +15,11 @@ body, html {
   float:left;
 }
 
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
 .header-text {
   float:left;
   margin-top: -1.35em;
@@ -42,10 +47,6 @@ body, html {
 
 div.content-text.skills-listing > ul > li {
   width:33%;
-}
-
-@media print {
-  .page-break { display: block; page-break-before: always; }
 }
 
 .content {
