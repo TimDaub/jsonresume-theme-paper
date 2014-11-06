@@ -2,13 +2,6 @@
 
 This is a theme for [JSON Resume](http://jsonresume.org/).
 
-## Todo
-
-* Include Merriweather correctly into project
-* Integrate recommendations and publications in resume
-* Make resume independent from web
-
-
 ## PDF / Printing
 
 Since the printing functionality of `resume-cli` is a utter catastrophy where your `.html` file gets
@@ -17,8 +10,10 @@ posted to a webservice for converted to `.pdf` this theme will not support this 
 **BUT**
 
 I've implemented another `.css` file that gets included with a attribute `print`: `media="print"`.
+
 So if you're trying to convert your resume from `.html` to `.pdf` just use Google Chrome and 
 then PDF Print!
+
 In my opinion this does the best job in formating and layouting.
 
 
