@@ -12,16 +12,19 @@ This is a theme for [JSON Resume](http://jsonresume.org/).
 ## PDF / Printing
 
 Since the printing functionality of `resume-cli` is a utter catastrophy where your `.html` file gets
-posted to a webservice and getting converted to `.pdf` this theme will not support this process.
+posted to a webservice for converted to `.pdf` this theme will not support this process.
 
 **BUT**
 
-You can just out-comment the `var print` variable in `index.js` and save your `.html` to `.pdf` via CTRL+P (Print to PDF) file via chrome.
+I've implemented another `.css` file that gets included with a attribute `print`: `media="print"`.
+So if you're trying to convert your resume from `.html` to `.pdf` just use Google Chrome and 
+then PDF Print!
 In my opinion this does the best job in formating and layouting.
 
 
 ## Demo
 You can check out a static demo of the resume on codepen.io: http://codepen.io/TimDaub/pen/bfCLz
+The folks over at jsonschema.org did an awesome job promoting my theme, so you can check it out here as well: http://themes.jsonresume.org/theme/paper
 
 ## Getting started
 
