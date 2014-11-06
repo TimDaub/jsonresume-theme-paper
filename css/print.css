@@ -7,16 +7,84 @@ body, html {
 .paper {
   width:100%;
   border: 0;
+
+  padding-top: 0;
 }
 
-.content:first-child {
-  padding-top: 3em;
+.header-pic {
+  float:left;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.35em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 1em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
 }
 
 .content-cat {
   width:35%;
 }
 
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
 @media print {
   .page-break { display: block; page-break-before: always; }
+}
+
+.content {
+  padding-top: 1em;
+}
+
+.education-listing > .heading {
+  margin-top:0;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
 }

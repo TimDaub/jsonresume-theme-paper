@@ -4,6 +4,25 @@ body, html {
   background-color:#fafafa;
 }
 
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
 /* Header */
 
 header {
@@ -113,7 +132,7 @@ header p {
   /*border-top: 1px solid #eeeeee;*/
 }
 
-.content:last-child {
+body > div > article > div > section:last-child {
   padding-bottom:1.5em;
 }
 
@@ -190,7 +209,6 @@ header p {
   color: #424242;
   
   font-weight:600;
-  font-size:0.75em;
 }
 
 .content-text ul li a {
@@ -266,7 +284,7 @@ header p {
 
 .content-text.skills-listing > ul > li > .highlight {
   
-  font-size:1em;
+  font-size:0.95em;
   font-weight:400;
   
   margin-left:1.25em;
