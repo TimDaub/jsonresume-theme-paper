@@ -21,7 +21,36 @@ function render(resume) {
           item.$last  = index === arr.length-1;
           return options.fn(item);
       }).join('');
-  });  
+  });
+
+  // http://stackoverflow.com/a/16315366
+  Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+    switch (operator) {
+        case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+        case '===':
+            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+        case '<':
+            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+        case '<=':
+            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+        case '>':
+            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+        case '>=':
+            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+        case '&&':
+            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+        case '||':
+            return (v1 || v2) ? options.fn(this) : options.inverse(this);
+        default:
+            return options.inverse(this);
+    }
+  });
+
+  // http://stackoverflow.com/a/18831911
+  Handlebars.registerHelper('commalist', function(items, options) {
+    return options.fn(items.join(', '));
+  });
 
   // return Handlebars.compile(template)({
   //   css: css,

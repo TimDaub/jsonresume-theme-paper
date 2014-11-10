@@ -1,4 +1,4 @@
-# Tim's resume template
+# JSON-Resume-Paper
 
 This is a theme for [JSON Resume](http://jsonresume.org/).
 

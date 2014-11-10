@@ -11,8 +11,20 @@ body, html {
   padding-top: 0;
 }
 
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
 .header-pic {
   float:left;
+}
+
+.profiles {
+  display:none;
 }
 
 .content {
@@ -22,11 +34,11 @@ body, html {
 
 .header-text {
   float:left;
-  margin-top: -1.35em;
+  margin-top: -1.6em;
 }
 
 .content-wrapper > .content:first-child {
-  padding-top: 1em;
+  padding-top: 2em;
 }
 
 .content:last-child {
@@ -34,7 +46,22 @@ body, html {
 }
 
 .content-cat {
-  width:35%;
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
 }
 
 .content-text ul:last-child {
@@ -45,16 +72,12 @@ body, html {
   width:50%;
 }
 
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
 div.content-text.skills-listing > ul > li {
   width:33%;
-}
-
-.content {
-  padding-top: 1em;
-}
-
-.education-listing > .heading {
-  margin-top:0;
 }
 
 .work-listing p {
@@ -88,4 +111,8 @@ div.content-text.skills-listing > ul > li:first-child {
 
 .highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
   border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
 }
