@@ -92,53 +92,7 @@
             {{/ifCond}}
           {{/location}}
       {{/resume.basics}}
-        <!-- LANGUAGE -->
-          {{#if resume.languages.length}}
-            <section class="content">
-              <div class="row">
-                <div class="content-cat">
-                  Languages
-                </div>
-                <div class="content-text">
-                  {{#each resume.languages}}
-                    <ul>
-                      {{#if language}}
-                        <li>{{language}}</li>
-                      {{/if}}
-                      {{#if fluency}}
-                        <li>{{fluency}}</li>
-                      {{/if}}
-                    </ul>
-                  {{/each}}
-                </div>
-              </div>
-            </section>
-          {{/if}}
-          {{#resume.basics}}
-            <!-- PROFILES -->
-            {{#if profiles.length}}
-              <section class="content profiles">
-                <div class="row">
-                  <div class="content-cat">
-                    Profiles
-                  </div>
-                  <div class="content-text profiles-listing">
-                    <ul>
-                      {{#each profiles}}
-                        {{#if network}}
-                          <li>
-                            <a href="{{url}}" target="_blank">
-                              {{network}}
-                            </a>
-                          </li>
-                        {{/if}}
-                      {{/each}}
-                    </ul>
-                  </div>
-                </div>
-              </section>
-            {{/if}}
-          {{/resume.basics}}
+        
           {{#if resume.work.length}}
             {{#foreach resume.work}}
               {{#if $first}}
@@ -190,6 +144,7 @@
                 </section>
             {{/foreach}}
           {{/if}}
+
           {{#if resume.volunteer.length}}
             {{#each resume.volunteer}}
               <section class="content">
@@ -220,6 +175,7 @@
               </section>
             {{/each}}
           {{/if}}
+
           {{#if resume.education.length}}
             {{#foreach resume.education}}
               {{#if $first}}
@@ -247,20 +203,19 @@
                         {{/if}}
                       {{/if}}
                       {{#if area}}
-                        {{#if gpa}}
                         <p class="highlight">
                           {{#if studyType}}
                           {{studyType}}:
                           {{/if}}
-                          <i>{{area}} ({{gpa}})</i>
+                          <i>{{area}} {{#if gpa}}({{gpa}}){{/if}}</i>
                         </p>
-                        {{/if}}
                       {{/if}}
                     </div>
                   </div>
                 </section>
             {{/foreach}}
           {{/if}}
+
           {{#if resume.awards.length}}
             {{#foreach resume.awards}}
               <section class="content">
@@ -288,6 +243,7 @@
               </section>
             {{/foreach}}
           {{/if}}
+
           {{#if resume.skills.length}}
           <section class="content">
             <div class="row">
@@ -316,6 +272,55 @@
             </div>
           </section>
           {{/if}}
+
+  <!-- LANGUAGE -->
+          {{#if resume.languages.length}}
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Languages
+                </div>
+                <div class="content-text">
+                  {{#each resume.languages}}
+                    <ul>
+                      {{#if language}}
+                        <li>{{language}}</li>
+                      {{/if}}
+                      {{#if fluency}}
+                        <li>{{fluency}}</li>
+                      {{/if}}
+                    </ul>
+                  {{/each}}
+                </div>
+              </div>
+            </section>
+          {{/if}}
+          {{#resume.basics}}
+            <!-- PROFILES -->
+            {{#if profiles.length}}
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                      {{#each profiles}}
+                        {{#if network}}
+                          <li>
+                            <a href="{{url}}" target="_blank">
+                              {{network}}
+                            </a>
+                          </li>
+                        {{/if}}
+                      {{/each}}
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            {{/if}}
+          {{/resume.basics}}
+
           {{#if resume.interests.length}}
             <section class="content">
               <div class="row">
@@ -328,7 +333,7 @@
                       <span class="name">
                         {{#if name}}
                           <strong>
-                            {{name}}:
+                            {{name}}{{#if keywords.length}}:{{/if}}
                           </strong>
                         {{/if}}
                       </span>
@@ -341,6 +346,7 @@
               </div>
             </section>
           {{/if}}
+
         </div>
     </article>
   </div>
