@@ -1,17 +1,17 @@
 {
-  "name": "jsonresume-theme-paper",
-  "version": "0.3.3",
-  "description": "A theme for JSON Resume",
-  "author": "Tim Daubenschütz",
+  "name": "jsonresume-theme-paper-responsive",
+  "version": "0.3.4",
+  "description": "A theme for JSON Resume based on jsonresume-theme-paper but responsive",
+  "author": "Divyendu Singh",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TimDaub/jsonresume-theme-paper"
+    "url": "https://github.com/divyenduz/jsonresume-theme-paper-responsive"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": "^2.0.0-alpha.4"
   },
-  "homepage": "https://github.com/TimDaub/jsonresume-theme-paper",
+  "homepage": "https://themes.jsonresume.org/paper-responsive",
   "main": "index.js",
   "scripts": {
     "start": "resume serve"
