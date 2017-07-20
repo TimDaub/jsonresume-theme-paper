@@ -4,7 +4,7 @@ This is a theme for [JSON Resume](http://jsonresume.org/).
 It is available via npm:
 
 ```
-npm install jsonresume-theme-paper
+npm install jsonresume-theme-paper-responsive
 ```
 
 ## PDF / Printing
@@ -23,8 +23,6 @@ In my opinion this does the best job in formating and layouting.
 
 
 ## Demo
-You can check out a static demo of the resume on codepen.io: http://codepen.io/TimDaub/pen/bfCLz
-
 
 The folks over at jsonschema.org did an awesome job promoting my theme, so you can check it out here as well: http://themes.jsonresume.org/theme/paper
 
@@ -85,7 +83,6 @@ Press ctrl-c to stop
 Congratulations, you've made it!
 
 __The theme development can now begin.__
-
 
 ## License
 
