@@ -108,6 +108,8 @@
                       {{#if startDate}}
                         {{#if endDate}}
                           <p>{{startDate}} till {{endDate}}</p>
+                        {{else}}
+                          <p>{{startDate}} till today</p>
                         {{/if}}
                       {{/if}}
                     </div>
