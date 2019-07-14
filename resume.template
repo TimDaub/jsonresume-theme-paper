@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
   <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <style>{{{css}}}</style>
   <style media="print">{{{print}}}</style>
 </head>
@@ -92,7 +92,7 @@
             {{/ifCond}}
           {{/location}}
       {{/resume.basics}}
-        
+
           {{#if resume.work.length}}
             {{#foreach resume.work}}
               {{#if $first}}
@@ -148,12 +148,12 @@
           {{/if}}
 
           {{#if resume.volunteer.length}}
-            {{#each resume.volunteer}}
+            {{#foreach resume.volunteer}}
               <section class="content">
                 <div class="row">
                   <div class="content-cat big-text">
-                    {{#if organization}}
-                      {{organization}}
+                    {{#if $first}}
+                      Volunteering
                     {{/if}}
                     {{#if startDate}}
                       {{#if endDate}}
@@ -162,6 +162,15 @@
                     {{/if}}
                   </div>
                   <div class="content-text work-listing">
+                    {{#if organization}}
+                      {{#if $first}}
+                        <p style="margin-top:2.4em;">
+                      {{else}}
+                         <p>
+                      {{/if}}
+                        <strong>{{organization}}</strong>
+                      </p>
+                    {{/if}}
                     {{#if summary}}
                       <p>
                         {{summary}}
@@ -175,7 +184,7 @@
                   </div>
                 </div>
               </section>
-            {{/each}}
+            {{/foreach}}
           {{/if}}
 
           {{#if resume.education.length}}
