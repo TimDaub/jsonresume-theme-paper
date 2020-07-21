@@ -86,6 +86,12 @@
                         <li>{{region}}</li>
                       </ul>
                     {{/if}}
+                    {{#if visa}}
+                      <ul>
+                        <li>Permissions</li>
+                        <li>{{visa}}</li>
+                      </ul>
+                    {{/if}}
                   </div>
                 </div>
               </section>
@@ -109,7 +115,7 @@
                         {{#if endDate}}
                           <p>{{startDate}} till {{endDate}}</p>
                         {{else}}
-                          <p>{{startDate}} till today</p>
+                          <p>{{startDate}} till present</p>
                         {{/if}}
                       {{/if}}
                     </div>
@@ -119,7 +125,7 @@
                           <p style="margin-top:2.4em;">
                         {{else}}
                           <p>
-                        {{/if}}
+                        {{/if}}                        
                         {{#ifCond website '&&' company}}
                           <strong>{{position}}</strong>
                           at <strong><a href="{{website}}">{{company}}:</a></strong>
@@ -133,6 +139,11 @@
                         {{/ifCond}}
                         </p>
                       {{/ifCond}}
+                      {{#if location}}      
+                        <p>                
+                          <span>{{location}}</span>                        
+                        </p>
+                      {{/if}}
                       {{#if summary}}
                         <p>{{summary}}</p>
                       {{/if}}
@@ -146,6 +157,68 @@
                 </section>
             {{/foreach}}
           {{/if}}
+
+          {{#if resume.projects.length}}
+            {{#foreach resume.projects}}
+              {{#if $first}}
+                <section class="content">
+              {{else}}
+                <section class="content work-content">
+              {{/if}}
+                  <div class="row">
+                    <div class="content-cat big-text">
+                      {{#if $first}}
+                        Projects
+                      {{/if}}
+                      {{#if startDate}}
+                        {{#if endDate}}
+                          <p>{{startDate}} till {{endDate}}</p>
+                        {{else}}
+                          <p>{{startDate}} till today</p>
+                        {{/if}}
+                      {{/if}}
+                    </div>
+                    <div class="content-text work-listing education-listing">                      
+
+                        {{#if $first}}
+                          <!-- <p> -->
+                          <p style="margin-top:2.4em;">
+                        {{else}}
+                          <p>
+                        {{/if}}
+                        {{#if name}}
+                          <strong>
+                          {{name}}
+                          </strong>
+                        {{/if}}
+                        {{#if website}}
+                          <strong><a href="{{website}}"> - {{website}}</a></strong>
+                        {{/if}}                        
+                        </p>
+                      
+                      {{#if description}}
+                        <p>{{description}}</p>
+                      {{/if}}
+                      {{#if highlights.length}}
+                        {{#each highlights}}
+                          <p class="highlight">{{.}}</p>
+                        {{/each}}
+                      {{/if}}
+                      <div class="content-text skills-listing">
+                        <p>
+                          {{#if keywords.length}}
+                            {{#commalist keywords}}{{.}}{{/commalist}}
+                          {{/if}}
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </section>
+            {{/foreach}}
+          {{/if}}
+
+
 
           {{#if resume.volunteer.length}}
             {{#foreach resume.volunteer}}
@@ -208,6 +281,7 @@
                     <div class="content-text work-listing education-listing">
                       {{#if institution}}
                         {{#if $first}}
+                          <!-- <p class="heading">{{institution}}</p> -->
                           <p class="heading" style="margin-top:2.35em;">{{institution}}</p>
                         {{else}}
                           <p class="heading">{{institution}}</p>
