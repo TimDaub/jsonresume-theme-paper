@@ -153,11 +153,11 @@
                         {{/if}}
                         {{#ifCond website '&&' company}}
                           <strong>{{position}}</strong>
-                          at <strong><a href="{{website}}">{{company}}:</a></strong>
+                          at <strong><a href="{{website}}">{{company}}</a></strong>
                         {{else}}
                           {{#if company.length}}
                             <strong>{{position}}</strong>
-                            at <strong>{{company}}:</strong>
+                            at <strong>{{company}}</strong>
                           {{else}}
                             <strong>{{position}}:</strong>
                           {{/if}}
