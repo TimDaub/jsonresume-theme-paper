@@ -45,7 +45,7 @@
                 {{#if email}}
                   <ul>
                     <li>Email</li>
-                    <li>{{email}}</li>
+                    <li><a href="mailto:{{email}}">{{email}}</a></li>
                   </ul>
                 {{/if}}
                 {{#if phone}}
