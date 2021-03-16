@@ -276,6 +276,7 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 
 .work-content, .education-content {
   padding-top: .75em;
+  page-break-inside: avoid;
 }
 
 section.content.education-content > div > div.content-cat {
